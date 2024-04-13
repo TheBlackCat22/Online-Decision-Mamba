@@ -1,0 +1,391 @@
+online-dt/.ipynb_checkpoints
+online-dt/.DS_Store
+online-dt/*.swp
+online-dt/*.pkl
+
+# Byte-compiled / optimized / DLL files
+online-dt/__pycache__/
+online-dt/*.py[cod]
+online-dt/*$py.class
+
+# C extensions
+online-dt/*.so
+
+# Distribution / packaging
+online-dt/.Python
+online-dt/build/
+online-dt/develop-eggs/
+online-dt/dist/
+online-dt/downloads/
+online-dt/eggs/
+online-dt/.eggs/
+online-dt/lib/
+online-dt/lib64/
+online-dt/parts/
+online-dt/sdist/
+online-dt/var/
+online-dt/wheels/
+online-dt/share/python-wheels/
+online-dt/*.egg-info/
+online-dt/.installed.cfg
+online-dt/*.egg
+online-dt/MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+online-dt/*.manifest
+online-dt/*.spec
+
+# Installer logs
+online-dt/pip-log.txt
+online-dt/pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+online-dt/htmlcov/
+online-dt/.tox/
+online-dt/.nox/
+online-dt/.coverage
+online-dt/.coverage.*
+online-dt/.cache
+online-dt/nosetests.xml
+online-dt/coverage.xml
+online-dt/*.cover
+online-dt/*.py,cover
+online-dt/.hypothesis/
+online-dt/.pytest_cache/
+online-dt/cover/
+
+# Translations
+online-dt/*.mo
+online-dt/*.pot
+
+# Django stuff:
+online-dt/*.log
+online-dt/local_settings.py
+online-dt/db.sqlite3
+online-dt/db.sqlite3-journal
+
+# Flask stuff:
+online-dt/instance/
+online-dt/.webassets-cache
+
+# Scrapy stuff:
+online-dt/.scrapy
+
+# Sphinx documentation
+online-dt/docs/_build/
+
+# PyBuilder
+online-dt/.pybuilder/
+online-dt/target/
+
+# Jupyter Notebook
+online-dt/.ipynb_checkpoints
+
+# IPython
+online-dt/profile_default/
+online-dt/ipython_config.py
+
+# pyenv
+#   For a library or package, you might want to ignore these files since the code is
+#   intended to run in multiple environments; otherwise, check them in:
+# .python-version
+
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+#Pipfile.lock
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow
+online-dt/__pypackages__/
+
+# Celery stuff
+online-dt/celerybeat-schedule
+online-dt/celerybeat.pid
+
+# SageMath parsed files
+online-dt/*.sage.py
+
+# Environments
+online-dt/.env
+online-dt/.venv
+online-dt/env/
+online-dt/venv/
+online-dt/ENV/
+online-dt/env.bak/
+online-dt/venv.bak/
+
+# Spyder project settings
+online-dt/.spyderproject
+online-dt/.spyproject
+
+# Rope project settings
+online-dt/.ropeproject
+
+# mkdocs documentation
+online-dt//site
+
+# mypy
+online-dt/.mypy_cache/
+online-dt/.dmypy.json
+online-dt/dmypy.json
+
+# Pyre type checker
+online-dt/.pyre/
+
+# pytype static type analyzer
+online-dt/.pytype/
+
+# Cython debug symbols
+online-dt/cython_debug/
+
+
+
+
+# ========== ========== Python ========== ==========
+# Byte-compiled / optimized / DLL files
+decision-mamba/__pycache__/
+decision-mamba/*.py[cod]
+decision-mamba/*$py.class
+
+# C extensions
+decision-mamba/*.so
+
+# Distribution / packaging
+decision-mamba/.Python
+decision-mamba/build/
+decision-mamba/develop-eggs/
+decision-mamba/dist/
+decision-mamba/downloads/
+decision-mamba/eggs/
+decision-mamba/.eggs/
+decision-mamba/lib/
+decision-mamba/lib64/
+decision-mamba/parts/
+decision-mamba/sdist/
+decision-mamba/var/
+decision-mamba/wheels/
+decision-mamba/share/python-wheels/
+decision-mamba/*.egg-info/
+decision-mamba/.installed.cfg
+decision-mamba/*.egg
+decision-mamba/MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+decision-mamba/*.manifest
+decision-mamba/*.spec
+
+# Installer logs
+decision-mamba/pip-log.txt
+decision-mamba/pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+decision-mamba/htmlcov/
+decision-mamba/.tox/
+decision-mamba/.nox/
+decision-mamba/.coverage
+decision-mamba/.coverage.*
+decision-mamba/.cache
+decision-mamba/nosetests.xml
+decision-mamba/coverage.xml
+decision-mamba/*.cover
+decision-mamba/*.py,cover
+decision-mamba/.hypothesis/
+decision-mamba/.pytest_cache/
+decision-mamba/cover/
+
+# Translations
+decision-mamba/*.mo
+decision-mamba/*.pot
+
+# Django stuff:
+decision-mamba/*.log
+decision-mamba/local_settings.py
+decision-mamba/db.sqlite3
+decision-mamba/db.sqlite3-journal
+
+# Flask stuff:
+decision-mamba/instance/
+decision-mamba/.webassets-cache
+
+# Scrapy stuff:
+decision-mamba/.scrapy
+
+# Sphinx documentation
+decision-mamba/docs/_build/
+
+# PyBuilder
+decision-mamba/.pybuilder/
+decision-mamba/target/
+
+# Jupyter Notebook
+decision-mamba/.ipynb_checkpoints
+
+# IPython
+decision-mamba/profile_default/
+decision-mamba/ipython_config.py
+
+# pyenv
+#   For a library or package, you might want to ignore these files since the code is
+#   intended to run in multiple environments; otherwise, check them in:
+# .python-version
+
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+#Pipfile.lock
+
+# poetry
+#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
+#   This is especially recommended for binary packages to ensure reproducibility, and is more
+#   commonly ignored for libraries.
+#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
+#poetry.lock
+
+# pdm
+#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
+#pdm.lock
+#   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
+#   in version control.
+#   https://pdm.fming.dev/#use-with-ide
+decision-mamba/.pdm.toml
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
+decision-mamba/__pypackages__/
+
+# Celery stuff
+decision-mamba/celerybeat-schedule
+decision-mamba/celerybeat.pid
+
+# SageMath parsed files
+decision-mamba/*.sage.py
+
+# Environments
+decision-mamba/.env
+decision-mamba/.venv
+decision-mamba/env/
+decision-mamba/venv/
+decision-mamba/ENV/
+decision-mamba/env.bak/
+decision-mamba/venv.bak/
+
+# Spyder project settings
+decision-mamba/.spyderproject
+decision-mamba/.spyproject
+
+# Rope project settings
+decision-mamba/.ropeproject
+
+# mkdocs documentation
+decision-mamba//site
+
+# mypy
+decision-mamba/.mypy_cache/
+decision-mamba/.dmypy.json
+decision-mamba/dmypy.json
+
+# Pyre type checker
+decision-mamba/.pyre/
+
+# pytype static type analyzer
+decision-mamba/.pytype/
+
+# Cython debug symbols
+decision-mamba/cython_debug/
+
+# PyCharm
+#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
+#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
+#  and can be added to the global gitignore or merged into this file.  For a more nuclear
+#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
+#.idea/
+# ========== ========== Python ========== ==========
+
+
+# ========== ========== VSCode ========== ==========
+decision-mamba/.vscode/*
+decision-mamba/!.vscode/settings.json
+decision-mamba/!.vscode/tasks.json
+decision-mamba/!.vscode/launch.json
+decision-mamba/!.vscode/extensions.json
+decision-mamba/!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+decision-mamba/.history/
+
+# Built Visual Studio Code Extensions
+decision-mamba/*.vsix
+# ========== ========== VSCode ========== ==========
+
+
+# ========== ========== macOS ========== ==========
+decision-mamba/# General
+decision-mamba/.DS_Store
+decision-mamba/.AppleDouble
+decision-mamba/.LSOverride
+
+# Icon must end with two \r
+decision-mamba/Icon
+
+
+# Thumbnails
+decision-mamba/._*
+
+# Files that might appear in the root of a volume
+decision-mamba/.DocumentRevisions-V100
+decision-mamba/.fseventsd
+decision-mamba/.Spotlight-V100
+decision-mamba/.TemporaryItems
+decision-mamba/.Trashes
+decision-mamba/.VolumeIcon.icns
+decision-mamba/.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+decision-mamba/.AppleDB
+decision-mamba/.AppleDesktop
+decision-mamba/Network Trash Folder
+decision-mamba/Temporary Items
+decision-mamba/.apdisk
+# ========== ========== macOS ========== ==========
+
+
+# ========== ========== Snap ========== ==========
+# gitginore template for creating Snap packages
+# website: https://snapcraft.io/
+
+decision-mamba/parts/
+decision-mamba/prime/
+decision-mamba/stage/
+decision-mamba/*.snap
+
+# Snapcraft global state tracking data(automatically generated)
+# https://forum.snapcraft.io/t/location-to-save-global-state/768
+/snap/.snapcraft/
+
+# Source archive packed by `snapcraft cleanbuild` before pushing to the LXD container
+/*_source.tar.bz2
+# ========== ========== Snap ========== ==========
+
+
+# ========== ========== Linux ========== ==========
+decision-mamba/*~
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+decision-mamba/.fuse_hidden*
+
+# KDE directory preferences
+decision-mamba/.directory
+
+# Linux trash folder which might appear on any partition or disk
+decision-mamba/.Trash-*
+
+# .nfs files are created when an open file is removed but is still being accessed
+decision-mamba/.nfs*
+# ========== ========== Linux ========== ==========
