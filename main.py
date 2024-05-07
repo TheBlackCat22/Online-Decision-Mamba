@@ -4,6 +4,8 @@ Copyright (c) Meta Platforms, Inc. and affiliates.
 This source code is licensed under the CC BY-NC license found in the
 LICENSE.md file in the root directory of this source tree.
 """
+import warnings
+warnings.filterwarnings("ignore")
 
 from torch.utils.tensorboard import SummaryWriter
 import argparse
@@ -21,7 +23,9 @@ from lamb import Lamb
 from stable_baselines3.common.vec_env import SubprocVecEnv
 from pathlib import Path
 from data import create_dataloader
-from decision_transformer.models.decision_transformer import DecisionTransformer
+# from models.decision_transformer import DecisionTransformer
+from models.online_decision_mamba import DecisionMamba
+
 from evaluation import create_vec_eval_episodes_fn, vec_evaluate_episode_rtg
 from trainer import SequenceTrainer
 from logger import Logger
@@ -43,7 +47,7 @@ class Experiment:
 
         self.device = variant.get("device", "cuda")
         self.target_entropy = -self.act_dim
-        self.model = DecisionTransformer(
+        self.model = DecisionMamba(
             state_dim=self.state_dim,
             act_dim=self.act_dim,
             action_range=self.action_range,
@@ -62,6 +66,10 @@ class Experiment:
             ordering=variant["ordering"],
             init_temperature=variant["init_temperature"],
             target_entropy=self.target_entropy,
+
+            model_type="dmamba",
+            drop_p=variant["dropout"],
+
         ).to(device=self.device)
 
         self.optimizer = Lamb(
@@ -464,35 +472,36 @@ class Experiment:
 
 
 if __name__ == "__main__":
+    
     parser = argparse.ArgumentParser()
-    parser.add_argument("--seed", type=int, default=10)
+    parser.add_argument("--seed", type=int, default=12)
     parser.add_argument("--env", type=str, default="hopper-medium-v2")
 
     # model options
     parser.add_argument("--K", type=int, default=20)
     parser.add_argument("--embed_dim", type=int, default=512)
-    parser.add_argument("--n_layer", type=int, default=4)
-    parser.add_argument("--n_head", type=int, default=4)
-    parser.add_argument("--activation_function", type=str, default="relu")
+    parser.add_argument("--n_layer", type=int, default=3)
+    parser.add_argument("--n_head", type=int, default=1)
+    parser.add_argument("--activation_function", type=str, default="gelu")
     parser.add_argument("--dropout", type=float, default=0.1)
-    parser.add_argument("--eval_context_length", type=int, default=5)
+    parser.add_argument("--eval_context_length", type=int, default=20)
     # 0: no pos embedding others: absolute ordering
     parser.add_argument("--ordering", type=int, default=0)
 
     # shared evaluation options
     parser.add_argument("--eval_rtg", type=int, default=3600)
-    parser.add_argument("--num_eval_episodes", type=int, default=10)
+    parser.add_argument("--num_eval_episodes", type=int, default=100)
 
     # shared training options
     parser.add_argument("--init_temperature", type=float, default=0.1)
-    parser.add_argument("--batch_size", type=int, default=256)
+    parser.add_argument("--batch_size", type=int, default=64)
     parser.add_argument("--learning_rate", "-lr", type=float, default=1e-4)
-    parser.add_argument("--weight_decay", "-wd", type=float, default=5e-4)
+    parser.add_argument("--weight_decay", "-wd", type=float, default=1e-4)
     parser.add_argument("--warmup_steps", type=int, default=10000)
 
     # pretraining options
-    parser.add_argument("--max_pretrain_iters", type=int, default=1)
-    parser.add_argument("--num_updates_per_pretrain_iter", type=int, default=5000)
+    parser.add_argument("--max_pretrain_iters", type=int, default=10)
+    parser.add_argument("--num_updates_per_pretrain_iter", type=int, default=10000)
 
     # finetuning options
     parser.add_argument("--max_online_iters", type=int, default=1500)
@@ -509,8 +518,10 @@ if __name__ == "__main__":
     parser.add_argument("--exp_name", type=str, default="default")
 
     args = parser.parse_args()
+    print("finish parsing args")
 
     utils.set_seed_everywhere(args.seed)
+    print("set seeds everywhere, about to run experiments")
     experiment = Experiment(vars(args))
 
     print("=" * 50)

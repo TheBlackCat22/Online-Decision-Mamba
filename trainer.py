@@ -82,7 +82,6 @@ class SequenceTrainer:
             rtg[:, :-1],
             timesteps,
             ordering,
-            padding_mask=padding_mask,
         )
 
         loss, nll, entropy = loss_fn(
